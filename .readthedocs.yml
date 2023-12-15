@@ -1,15 +1,17 @@
-# Required
 version: 2
 
-# Image to use
 build:
   os: "ubuntu-22.04"
-  image: testing
+  tools:
+    python: "3.9"
 
-# Configuration
+sphinx:
+  configuration: docs/conf.py
+ 
 python:
-  version: 3.9
   install:
-    - requirements: docs/requirements.txt
+    - requirements: "docs/requirements.txt"
     - method: pip
       path: .
+
+   
